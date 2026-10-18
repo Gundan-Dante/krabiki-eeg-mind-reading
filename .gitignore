@@ -1,0 +1,52 @@
+eeg-mind-reading-challenge
+*.zip
+.venv
+
+# generated, large: never commit
+features/
+frames/
+audio/
+*.mp4
+*.wav
+
+# symlinked data / features in worktrees, external downloads
+/features
+ext_data/
+
+# python / jupyter / tooling
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+build/
+dist/
+.cache/
+*.log
+wandb/
+.vscode/
+.idea/
+.DS_Store
+
+# large model files (small final weights go in weights/, which is not ignored)
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+!weights/**
+
+# experiment outputs: keep locally, commit only the canonical submission
+results/similarity/
+# only the final predictions are committed (older sets: research/submissions/)
+submissions/*
+results/zero_cost/
+!submissions/README.md
+bundle/
+!submissions/final_v4b_csls/
+
+# training pipeline outputs (training/run_pipeline.sh)
+/work/
+/work_*/
+/work_*.*

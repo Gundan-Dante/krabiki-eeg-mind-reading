@@ -1,0 +1,77 @@
+# zero-cost ideas on decw: CV = mean over 6 subjects (train-only, KFold 5 seed 0), dev = sub-01..04, paired Wilcoxon vs the first row of each block
+## CLIP B-32 f8
+base                         CV pct 0.2319 E1  6.77 E5 24.23 | dev  14.7 /  42.2 /  7.50
+eeg_center                   CV pct 0.2316 E1  6.79 E5 24.21 | dev  15.0 /  41.9 /  7.75 | dCV -0.0002 dE1 +0.0002 dE5 -0.0002 | dev better/worse 149/103 p=0.000429
+cand_center                  CV pct 0.2318 E1  6.74 E5 24.27 | dev  14.7 /  42.4 /  7.88 | dCV -0.0000 dE1 -0.0002 dE5 +0.0004 | dev better/worse 39/54 p=0.0835
+both_center                  CV pct 0.2315 E1  6.92 E5 24.27 | dev  15.2 /  41.9 /  7.75 | dCV -0.0004 dE1 +0.0016 dE5 +0.0004 | dev better/worse 147/101 p=0.000365
+eeg_own                      CV pct 0.2319 E1  6.80 E5 24.24 | dev  14.5 /  43.9 /  7.75 | dCV +0.0000 dE1 +0.0003 dE5 +0.0000 | dev better/worse 155/121 p=0.00992
+cand_own                     CV pct 0.2319 E1  6.76 E5 24.43 | dev  14.5 /  42.4 /  7.75 | dCV +0.0000 dE1 -0.0001 dE5 +0.0020 | dev better/worse 87/79 p=0.192
+both_own                     CV pct 0.2318 E1  6.84 E5 24.43 | dev  14.0 /  43.4 /  7.50 | dCV -0.0000 dE1 +0.0007 dE5 +0.0020 | dev better/worse 155/117 p=0.000684
+jit1                         CV pct 0.2290 E1  6.76 E5 24.44 | dev  14.2 /  41.4 /  7.88 | dCV -0.0029 dE1 -0.0001 dE5 +0.0020 | dev better/worse 125/119 p=0.432
+jit2                         CV pct 0.2302 E1  6.63 E5 24.25 | dev  13.7 /  40.9 /  8.00 | dCV -0.0017 dE1 -0.0014 dE5 +0.0002 | dev better/worse 136/138 p=0.898
+win_150_350                  CV pct 0.2675 E1  5.39 E5 20.46 | dev  10.0 /  32.1 / 11.62 | dCV +0.0356 dE1 -0.0137 dE5 -0.0377 | dev better/worse 115/236 p=3.51e-10
+win_600_1200                 CV pct 0.3950 E1  2.08 E5  9.36 | dev   2.9 /  14.0 / 28.25 | dCV +0.1631 dE1 -0.0468 dE5 -0.1487 | dev better/worse 79/317 p=1.15e-37
+base@csls5                   CV pct 0.2261 E1  7.35 E5 25.33 | dev  17.4 /  49.3 /  6.00 | dCV -0.0058 dE1 +0.0058 dE5 +0.0110 | dev better/worse 205/92 p=2.07e-12
+base@csls10                  CV pct 0.2259 E1  7.39 E5 25.51 | dev  17.4 /  48.5 /  6.38 | dCV -0.0059 dE1 +0.0062 dE5 +0.0128 | dev better/worse 205/86 p=5.75e-13
+base@csls20                  CV pct 0.2259 E1  7.34 E5 25.36 | dev  17.2 /  48.0 /  6.25 | dCV -0.0060 dE1 +0.0057 dE5 +0.0112 | dev better/worse 199/86 p=1.43e-13
+eeg_center@csls10            CV pct 0.2260 E1  7.45 E5 25.46 | dev  17.9 /  48.5 /  5.88 | dCV -0.0059 dE1 +0.0069 dE5 +0.0123 | dev better/worse 204/106 p=3.45e-09
+jit1@csls5                   CV pct 0.2229 E1  7.53 E5 26.01 | dev  17.6 /  51.0 /  5.62 | dCV -0.0089 dE1 +0.0076 dE5 +0.0178 | dev better/worse 202/97 p=2.23e-11
+## DINOv2-B patch f8
+base                         CV pct 0.2239 E1  7.22 E5 24.96 | dev  13.0 /  41.7 /  7.50
+eeg_center                   CV pct 0.2233 E1  7.31 E5 25.04 | dev  13.0 /  42.4 /  7.12 | dCV -0.0006 dE1 +0.0009 dE5 +0.0008 | dev better/worse 142/91 p=0.00369
+both_center                  CV pct 0.2233 E1  7.31 E5 25.07 | dev  13.5 /  43.6 /  6.88 | dCV -0.0006 dE1 +0.0009 dE5 +0.0011 | dev better/worse 145/91 p=0.00177
+eeg_own                      CV pct 0.2237 E1  7.34 E5 25.01 | dev  12.5 /  42.4 /  7.62 | dCV -0.0001 dE1 +0.0012 dE5 +0.0005 | dev better/worse 139/113 p=0.0428
+jit1                         CV pct 0.2212 E1  7.45 E5 25.09 | dev  13.2 /  42.2 /  8.00 | dCV -0.0026 dE1 +0.0023 dE5 +0.0014 | dev better/worse 109/108 p=0.285
+base@csls5                   CV pct 0.2170 E1  8.18 E5 27.04 | dev  16.7 /  46.6 /  6.12 | dCV -0.0069 dE1 +0.0095 dE5 +0.0209 | dev better/worse 212/93 p=9.17e-13
+base@csls10                  CV pct 0.2168 E1  8.08 E5 27.03 | dev  17.4 /  46.1 /  6.25 | dCV -0.0071 dE1 +0.0086 dE5 +0.0207 | dev better/worse 211/91 p=2.21e-13
+base@csls20                  CV pct 0.2167 E1  8.09 E5 27.00 | dev  16.7 /  46.6 /  6.50 | dCV -0.0071 dE1 +0.0087 dE5 +0.0204 | dev better/worse 214/77 p=4.3e-14
+eeg_center@csls10            CV pct 0.2168 E1  8.12 E5 27.09 | dev  17.2 /  47.3 /  6.38 | dCV -0.0071 dE1 +0.0090 dE5 +0.0213 | dev better/worse 214/95 p=6.54e-12
+## V-JEPA 2 L f16
+base                         CV pct 0.2304 E1  6.86 E5 23.49 | dev  13.0 /  39.5 /  7.25
+eeg_center                   CV pct 0.2296 E1  6.86 E5 23.52 | dev  13.2 /  42.2 /  7.50 | dCV -0.0008 dE1 -0.0000 dE5 +0.0003 | dev better/worse 155/99 p=0.00767
+both_center                  CV pct 0.2296 E1  6.89 E5 23.50 | dev  13.0 /  41.2 /  7.50 | dCV -0.0008 dE1 +0.0003 dE5 +0.0001 | dev better/worse 143/108 p=0.0309
+eeg_own                      CV pct 0.2296 E1  6.83 E5 23.49 | dev  12.5 /  41.4 /  7.88 | dCV -0.0008 dE1 -0.0004 dE5 -0.0001 | dev better/worse 140/128 p=0.501
+jit1                         CV pct 0.2276 E1  6.96 E5 24.18 | dev  11.8 /  36.8 /  8.00 | dCV -0.0028 dE1 +0.0010 dE5 +0.0069 | dev better/worse 122/119 p=0.852
+base@csls5                   CV pct 0.2241 E1  7.43 E5 24.88 | dev  16.2 /  46.8 /  6.00 | dCV -0.0063 dE1 +0.0057 dE5 +0.0138 | dev better/worse 226/95 p=2.06e-15
+base@csls10                  CV pct 0.2238 E1  7.42 E5 24.81 | dev  15.9 /  46.8 /  6.00 | dCV -0.0066 dE1 +0.0056 dE5 +0.0132 | dev better/worse 230/87 p=2.31e-17
+base@csls20                  CV pct 0.2237 E1  7.44 E5 24.69 | dev  15.4 /  46.8 /  6.00 | dCV -0.0067 dE1 +0.0058 dE5 +0.0120 | dev better/worse 220/87 p=7.51e-17
+eeg_center@csls10            CV pct 0.2236 E1  7.51 E5 24.91 | dev  15.4 /  47.3 /  6.00 | dCV -0.0068 dE1 +0.0065 dE5 +0.0141 | dev better/worse 222/96 p=2.7e-14
+## CLIP L-14 laion2b_s32b_b82k f8
+base                         CV pct 0.2413 E1  6.02 E5 23.30 | dev  14.5 /  35.8 /  9.62
+eeg_center                   CV pct 0.2404 E1  6.09 E5 23.43 | dev  14.7 /  38.0 /  8.62 | dCV -0.0009 dE1 +0.0007 dE5 +0.0013 | dev better/worse 154/103 p=0.000298
+base@csls10                  CV pct 0.2356 E1  6.82 E5 24.34 | dev  16.4 /  46.1 /  6.75 | dCV -0.0056 dE1 +0.0081 dE5 +0.0104 | dev better/worse 213/95 p=1.38e-13
+eeg_center@csls10            CV pct 0.2355 E1  6.95 E5 24.49 | dev  16.4 /  46.3 /  6.62 | dCV -0.0058 dE1 +0.0094 dE5 +0.0119 | dev better/worse 212/101 p=2.85e-10
+## CLIP B-32 block-8 CLS f8
+base                         CV pct 0.2734 E1  5.69 E5 19.26 | dev  12.3 /  31.4 / 12.50
+eeg_center                   CV pct 0.2725 E1  5.77 E5 19.34 | dev  11.8 /  32.6 / 12.38 | dCV -0.0009 dE1 +0.0008 dE5 +0.0008 | dev better/worse 156/137 p=0.248
+base@csls10                  CV pct 0.2706 E1  5.87 E5 20.01 | dev  13.2 /  35.0 / 11.00 | dCV -0.0029 dE1 +0.0018 dE5 +0.0076 | dev better/worse 199/118 p=7.86e-06
+## window blends (vs CLIP base)
+ref clip_b32:8:base          CV pct 0.2319 E1  6.77 E5 24.23 | dev  14.7 /  42.2 /  7.50
+blend csls0                  CV pct 0.2376 E1  6.59 E5 23.62 | dev  12.3 /  39.2 /  9.12 | dCV +0.0057 dE1 -0.0017 dE5 -0.0061 | dev better/worse 119/173 p=0.00349
+ref clip_b32:8:base          CV pct 0.2319 E1  6.77 E5 24.23 | dev  14.7 /  42.2 /  7.50
+blend csls0                  CV pct 0.2727 E1  4.97 E5 18.36 | dev   9.1 /  34.8 / 12.62 | dCV +0.0408 dE1 -0.0180 dE5 -0.0588 | dev better/worse 128/234 p=2.37e-10
+ref clip_b32:8:base          CV pct 0.2319 E1  6.77 E5 24.23 | dev  14.7 /  42.2 /  7.50
+blend csls0                  CV pct 0.2495 E1  5.95 E5 21.51 | dev  11.3 /  36.0 / 10.50 | dCV +0.0176 dE1 -0.0082 dE5 -0.0272 | dev better/worse 139/203 p=0.000548
+## blends vs M11 (CLIP+patch)
+ref clip_b32:8:base,dinov2_b_patch_all:8:base CV pct 0.2155 E1  7.78 E5 26.59 | dev  15.2 /  45.3 /  7.25
+blend csls0                  CV pct 0.2155 E1  7.78 E5 26.59 | dev  15.2 /  45.3 /  7.25 | dCV +0.0000 dE1 +0.0000 dE5 +0.0000 | dev better/worse 0/0 p=1
+blend csls5                  CV pct 0.2101 E1  8.50 E5 27.94 | dev  21.8 /  47.5 /  5.88 | dCV -0.0054 dE1 +0.0072 dE5 +0.0135 | dev better/worse 217/75 p=5.61e-18
+blend csls10                 CV pct 0.2099 E1  8.56 E5 28.04 | dev  22.5 /  47.5 /  6.00 | dCV -0.0057 dE1 +0.0078 dE5 +0.0145 | dev better/worse 218/71 p=8.68e-19
+blend csls20                 CV pct 0.2096 E1  8.47 E5 28.08 | dev  21.6 /  48.3 /  5.88 | dCV -0.0059 dE1 +0.0069 dE5 +0.0149 | dev better/worse 209/76 p=4.54e-18
+ref clip_b32:8:base,dinov2_b_patch_all:8:base CV pct 0.2155 E1  7.78 E5 26.59 | dev  15.2 /  45.3 /  7.25
+blend csls0                  CV pct 0.2018 E1  8.65 E5 28.43 | dev  16.2 /  44.4 /  6.88 | dCV -0.0138 dE1 +0.0087 dE5 +0.0183 | dev better/worse 176/122 p=0.000105
+blend csls5                  CV pct 0.1952 E1  9.61 E5 30.40 | dev  21.1 /  51.7 /  5.12 | dCV -0.0204 dE1 +0.0183 dE5 +0.0381 | dev better/worse 235/87 p=3.4e-15
+blend csls10                 CV pct 0.1950 E1  9.75 E5 30.36 | dev  21.3 /  52.7 /  5.00 | dCV -0.0205 dE1 +0.0197 dE5 +0.0376 | dev better/worse 236/85 p=1.9e-16
+blend csls20                 CV pct 0.1948 E1  9.76 E5 30.31 | dev  21.6 /  52.5 /  5.00 | dCV -0.0207 dE1 +0.0198 dE5 +0.0372 | dev better/worse 232/86 p=1.65e-16
+ref clip_b32:8:base,dinov2_b_patch_all:8:base CV pct 0.2155 E1  7.78 E5 26.59 | dev  15.2 /  45.3 /  7.25
+blend csls0                  CV pct 0.2011 E1  8.73 E5 28.54 | dev  18.1 /  47.5 /  6.38 | dCV -0.0145 dE1 +0.0095 dE5 +0.0194 | dev better/worse 183/114 p=8.94e-07
+blend csls10                 CV pct 0.1944 E1  9.77 E5 30.54 | dev  23.0 /  53.9 /  4.88 | dCV -0.0211 dE1 +0.0199 dE5 +0.0395 | dev better/worse 235/83 p=6.26e-18
+ref clip_b32:8:base,dinov2_b_patch_all:8:base CV pct 0.2155 E1  7.78 E5 26.59 | dev  15.2 /  45.3 /  7.25
+blend csls0                  CV pct 0.2050 E1  8.41 E5 28.16 | dev  17.9 /  44.1 /  7.38 | dCV -0.0105 dE1 +0.0063 dE5 +0.0156 | dev better/worse 179/125 p=0.00274
+blend csls10                 CV pct 0.1982 E1  9.53 E5 30.19 | dev  23.3 /  52.5 /  5.25 | dCV -0.0173 dE1 +0.0175 dE5 +0.0359 | dev better/worse 234/83 p=2.48e-17
+ref clip_b32:8:base,dinov2_b_patch_all:8:base CV pct 0.2155 E1  7.78 E5 26.59 | dev  15.2 /  45.3 /  7.25
+blend csls0                  CV pct 0.1978 E1  9.02 E5 28.88 | dev  18.6 /  46.6 /  6.38 | dCV -0.0177 dE1 +0.0124 dE5 +0.0228 | dev better/worse 193/130 p=1.79e-05
+blend csls10                 CV pct 0.1908 E1  9.79 E5 30.33 | dev  21.8 /  54.2 /  4.75 | dCV -0.0247 dE1 +0.0201 dE5 +0.0374 | dev better/worse 225/103 p=3.98e-15
+ref clip_b32:8:base,dinov2_b_patch_all:8:base CV pct 0.2155 E1  7.78 E5 26.59 | dev  15.2 /  45.3 /  7.25
+blend csls0                  CV pct 0.1971 E1  8.95 E5 29.08 | dev  18.9 /  45.6 /  6.38 | dCV -0.0184 dE1 +0.0117 dE5 +0.0248 | dev better/worse 196/124 p=1.65e-07
+blend csls10                 CV pct 0.1901 E1  9.94 E5 30.45 | dev  23.3 /  54.7 /  4.75 | dCV -0.0254 dE1 +0.0216 dE5 +0.0386 | dev better/worse 233/101 p=2.21e-17

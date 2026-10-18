@@ -1,0 +1,78 @@
+{
+ "determinism_sub-01": {
+  "decw-clip_b32_f8": {
+   "max_abs_diff": 0.0,
+   "top1_agree": 1.0,
+   "bit_identical": true
+  },
+  "decw-dinov2_b_patch_all_f8": {
+   "max_abs_diff": 0.0,
+   "top1_agree": 1.0,
+   "bit_identical": true
+  },
+  "decw-vjepa2_l_all_f16": {
+   "max_abs_diff": 0.0,
+   "top1_agree": 1.0,
+   "bit_identical": true
+  },
+  "con-clip_b32-two_tower_d256_f8": {
+   "max_abs_diff": 0.0,
+   "top1_agree": 1.0,
+   "bit_identical": true
+  },
+  "decw-clip_b32_mid8_all_f8": {
+   "max_abs_diff": 0.0,
+   "top1_agree": 1.0,
+   "bit_identical": true
+  },
+  "final_ranked_lists": {
+   "identical": true,
+   "rows_identical": 102,
+   "top1_agree": 1.0,
+   "ref": "/home/kparpie/Krabiki-matching/submissions/fin5_ctr_m5_cv/sub-01_ranked_candidate_list.npy",
+   "dev_top1_new_vs_ref": [
+    0.29411764705882354,
+    0.29411764705882354
+   ]
+  }
+ },
+ "determinism_sub-05": {
+  "decw-clip_b32_f8": {
+   "max_abs_diff": 0.0,
+   "top1_agree": 1.0,
+   "bit_identical": true
+  },
+  "decw-dinov2_b_patch_all_f8": {
+   "max_abs_diff": 0.0,
+   "top1_agree": 1.0,
+   "bit_identical": true
+  },
+  "decw-vjepa2_l_all_f16": {
+   "max_abs_diff": 0.0,
+   "top1_agree": 1.0,
+   "bit_identical": true
+  },
+  "con-clip_b32-two_tower_d256_f8": {
+   "max_abs_diff": 0.0,
+   "top1_agree": 1.0,
+   "bit_identical": true
+  },
+  "decw-clip_b32_mid8_all_f8": {
+   "max_abs_diff": 0.0,
+   "top1_agree": 1.0,
+   "bit_identical": true
+  },
+  "final_ranked_lists": {
+   "identical": true,
+   "rows_identical": 102,
+   "top1_agree": 1.0,
+   "ref": "/home/kparpie/Krabiki-matching/submissions/final_csls/sub-05_ranked_candidate_list.npy"
+  }
+ },
+ "permutation_sub-01": {
+  "output_equals_permuted_input": true,
+  "rows_identical": 102,
+  "top1_agree": 1.0
+ },
+ "permutation_sub-05": "not finished"
+}

@@ -1,0 +1,775 @@
+{
+ "format_version": 2,
+ "source": "v4b_ctr_m5 (final_v4b_csls)",
+ "members": [
+  {
+   "name": "pdecw-dinov2_b_patch_all_f8",
+   "spec": "pdecw:dinov2_b_patch_all",
+   "head": "pdecw",
+   "features": "dinov2_b_patch_all",
+   "frames": 8,
+   "public_models": [
+    "dinov2_b"
+   ]
+  },
+  {
+   "name": "decw-vjepa2_l_all_f16",
+   "spec": "decw:vjepa2_l_all:16",
+   "head": "decw",
+   "features": "vjepa2_l_all",
+   "frames": 16,
+   "public_models": [
+    "vjepa2_l"
+   ]
+  },
+  {
+   "name": "con-clip_b32-two_tower_d256_f8",
+   "spec": "con:clip_b32:two_tower_d256",
+   "head": "con",
+   "features": "clip_b32",
+   "frames": 8,
+   "public_models": [
+    "clip_b32"
+   ]
+  },
+  {
+   "name": "pdecw-alexnet_c5p6_f8",
+   "spec": "pdecw:alexnet_c5p6:8",
+   "head": "pdecw",
+   "features": "alexnet_c5p6",
+   "frames": 8,
+   "public_models": [
+    "alexnet"
+   ]
+  },
+  {
+   "name": "decw-lowlevel_all_f1",
+   "spec": "decw:lowlevel_all:1",
+   "head": "decw",
+   "features": "lowlevel_all",
+   "frames": 1,
+   "public_models": [
+    "none (computed by our own code)"
+   ]
+  },
+  {
+   "name": "decw-clap_all_f1",
+   "spec": "decw:clap_all:1",
+   "head": "decw",
+   "features": "clap_all",
+   "frames": 1,
+   "public_models": [
+    "clap"
+   ]
+  },
+  {
+   "name": "pdecw-lowav_all_f1",
+   "spec": "pdecw:lowav_all:1",
+   "head": "pdecw",
+   "features": "lowav_all",
+   "frames": 1,
+   "public_models": [
+    "none (computed by our own code)"
+   ]
+  }
+ ],
+ "weights": {
+  "1": [
+   0.2,
+   0.1,
+   0.1,
+   0.2,
+   0.1,
+   0.1,
+   0.2
+  ],
+  "2": [
+   0.2,
+   0.1,
+   0.1,
+   0.2,
+   0.1,
+   0.1,
+   0.2
+  ],
+  "3": [
+   0.2,
+   0.1,
+   0.1,
+   0.2,
+   0.1,
+   0.1,
+   0.2
+  ],
+  "4": [
+   0.2,
+   0.1,
+   0.1,
+   0.2,
+   0.1,
+   0.1,
+   0.2
+  ],
+  "5": [
+   0.2,
+   0.1,
+   0.1,
+   0.2,
+   0.1,
+   0.1,
+   0.2
+  ],
+  "6": [
+   0.2,
+   0.1,
+   0.1,
+   0.2,
+   0.1,
+   0.1,
+   0.2
+  ]
+ },
+ "window": [
+  5,
+  60
+ ],
+ "max_seconds": 1.5,
+ "sfreq": 500,
+ "decimate_factor": 5,
+ "csls_k": 5,
+ "csls_stage": "member",
+ "con_seeds": [
+  0,
+  1,
+  2
+ ],
+ "center_test": true,
+ "candidate_ids": [
+  1001,
+  1102
+ ],
+ "hyperparameters": {
+  "sub-01": {
+   "pdecw-dinov2_b_patch_all_f8": {
+    "dec_alpha": 1778.2794100389228,
+    "enc_alpha": 10000.0,
+    "lam": 0.1
+   },
+   "decw-vjepa2_l_all_f16": {
+    "dec_alpha": 1778.2794100389228,
+    "enc_alpha": 5623.413251903491
+   },
+   "con-clip_b32-two_tower_d256_f8": {
+    "dec_alpha": 1000.0,
+    "enc_alpha": 10000.0
+   },
+   "pdecw-alexnet_c5p6_f8": {
+    "dec_alpha": 1000.0,
+    "enc_alpha": 56234.13251903491,
+    "lam": 0.05
+   },
+   "decw-lowlevel_all_f1": {
+    "dec_alpha": 562.341325190349,
+    "enc_alpha": 3162.2776601683795
+   },
+   "decw-clap_all_f1": {
+    "dec_alpha": 1778.2794100389228,
+    "enc_alpha": 562341.3251903491
+   },
+   "pdecw-lowav_all_f1": {
+    "dec_alpha": 1000.0,
+    "enc_alpha": 3162.2776601683795,
+    "lam": 0.05
+   }
+  },
+  "sub-02": {
+   "pdecw-dinov2_b_patch_all_f8": {
+    "dec_alpha": 1778.2794100389228,
+    "enc_alpha": 10000.0,
+    "lam": 0.1
+   },
+   "decw-vjepa2_l_all_f16": {
+    "dec_alpha": 1000.0,
+    "enc_alpha": 5623.413251903491
+   },
+   "con-clip_b32-two_tower_d256_f8": {
+    "dec_alpha": 1000.0,
+    "enc_alpha": 10000.0
+   },
+   "pdecw-alexnet_c5p6_f8": {
+    "dec_alpha": 1000.0,
+    "enc_alpha": 100000.0,
+    "lam": 0.05
+   },
+   "decw-lowlevel_all_f1": {
+    "dec_alpha": 562.341325190349,
+    "enc_alpha": 3162.2776601683795
+   },
+   "decw-clap_all_f1": {
+    "dec_alpha": 1778.2794100389228,
+    "enc_alpha": 10000000.0
+   },
+   "pdecw-lowav_all_f1": {
+    "dec_alpha": 1000.0,
+    "enc_alpha": 5623.413251903491,
+    "lam": 0.05
+   }
+  },
+  "sub-03": {
+   "pdecw-dinov2_b_patch_all_f8": {
+    "dec_alpha": 3162.2776601683795,
+    "enc_alpha": 17782.794100389227,
+    "lam": 0.1
+   },
+   "decw-vjepa2_l_all_f16": {
+    "dec_alpha": 3162.2776601683795,
+    "enc_alpha": 31622.776601683792
+   },
+   "con-clip_b32-two_tower_d256_f8": {
+    "dec_alpha": 3162.2776601683795,
+    "enc_alpha": 10000.0
+   },
+   "pdecw-alexnet_c5p6_f8": {
+    "dec_alpha": 3162.2776601683795,
+    "enc_alpha": 177827.94100389228,
+    "lam": 0.05
+   },
+   "decw-lowlevel_all_f1": {
+    "dec_alpha": 1000.0,
+    "enc_alpha": 3162.2776601683795
+   },
+   "decw-clap_all_f1": {
+    "dec_alpha": 5623.413251903491,
+    "enc_alpha": 177827.94100389228
+   },
+   "pdecw-lowav_all_f1": {
+    "dec_alpha": 1778.2794100389228,
+    "enc_alpha": 1778.2794100389228,
+    "lam": 0.1
+   }
+  },
+  "sub-04": {
+   "pdecw-dinov2_b_patch_all_f8": {
+    "dec_alpha": 1778.2794100389228,
+    "enc_alpha": 17782.794100389227,
+    "lam": 0.1
+   },
+   "decw-vjepa2_l_all_f16": {
+    "dec_alpha": 1778.2794100389228,
+    "enc_alpha": 17782.794100389227
+   },
+   "con-clip_b32-two_tower_d256_f8": {
+    "dec_alpha": 1778.2794100389228,
+    "enc_alpha": 10000.0
+   },
+   "pdecw-alexnet_c5p6_f8": {
+    "dec_alpha": 1000.0,
+    "enc_alpha": 177827.94100389228,
+    "lam": 0.1
+   },
+   "decw-lowlevel_all_f1": {
+    "dec_alpha": 1000.0,
+    "enc_alpha": 5623.413251903491
+   },
+   "decw-clap_all_f1": {
+    "dec_alpha": 1778.2794100389228,
+    "enc_alpha": 1000000.0
+   },
+   "pdecw-lowav_all_f1": {
+    "dec_alpha": 1000.0,
+    "enc_alpha": 3162.2776601683795,
+    "lam": 0.1
+   }
+  },
+  "sub-05": {
+   "pdecw-dinov2_b_patch_all_f8": {
+    "dec_alpha": 1778.2794100389228,
+    "enc_alpha": 17782.794100389227,
+    "lam": 0.1
+   },
+   "decw-vjepa2_l_all_f16": {
+    "dec_alpha": 1778.2794100389228,
+    "enc_alpha": 10000.0
+   },
+   "con-clip_b32-two_tower_d256_f8": {
+    "dec_alpha": 1778.2794100389228,
+    "enc_alpha": 31622.776601683792
+   },
+   "pdecw-alexnet_c5p6_f8": {
+    "dec_alpha": 1000.0,
+    "enc_alpha": 100000.0,
+    "lam": 0.1
+   },
+   "decw-lowlevel_all_f1": {
+    "dec_alpha": 562.341325190349,
+    "enc_alpha": 5623.413251903491
+   },
+   "decw-clap_all_f1": {
+    "dec_alpha": 1778.2794100389228,
+    "enc_alpha": 17782794.100389227
+   },
+   "pdecw-lowav_all_f1": {
+    "dec_alpha": 1000.0,
+    "enc_alpha": 10000.0,
+    "lam": 0.05
+   }
+  },
+  "sub-06": {
+   "pdecw-dinov2_b_patch_all_f8": {
+    "dec_alpha": 1778.2794100389228,
+    "enc_alpha": 177827.94100389228,
+    "lam": 0.1
+   },
+   "decw-vjepa2_l_all_f16": {
+    "dec_alpha": 1778.2794100389228,
+    "enc_alpha": 17782.794100389227
+   },
+   "con-clip_b32-two_tower_d256_f8": {
+    "dec_alpha": 1778.2794100389228,
+    "enc_alpha": 56234.13251903491
+   },
+   "pdecw-alexnet_c5p6_f8": {
+    "dec_alpha": 1778.2794100389228,
+    "enc_alpha": 177827.94100389228,
+    "lam": 0.1
+   },
+   "decw-lowlevel_all_f1": {
+    "dec_alpha": 1000.0,
+    "enc_alpha": 1000000000.0
+   },
+   "decw-clap_all_f1": {
+    "dec_alpha": 1778.2794100389228,
+    "enc_alpha": 177827941.00389227
+   },
+   "pdecw-lowav_all_f1": {
+    "dec_alpha": 1000.0,
+    "enc_alpha": 10000.0,
+    "lam": 0.1
+   }
+  }
+ },
+ "public_models": {
+  "clip_b32": {
+   "used_by": [
+    "clip_b32",
+    "clip_b32_*"
+   ],
+   "library": "open_clip_torch",
+   "name": "ViT-B-32",
+   "pretrained": "laion2b_s34b_b79k",
+   "hf_repo": "laion/CLIP-ViT-B-32-laion2B-s34B-b79K",
+   "revision": "1a25a446712ba5ee05982a381eed697ef9b435cf",
+   "output": "image embedding (encode_image), 512-d"
+  },
+  "dinov2_b": {
+   "used_by": [
+    "dinov2_b_*"
+   ],
+   "library": "timm",
+   "name": "vit_base_patch14_dinov2.lvd142m",
+   "hf_repo": "timm/vit_base_patch14_dinov2.lvd142m",
+   "revision": "4685c99dabffe5affac90bd99dbffd25801ae58d",
+   "output": "mean of the final normed patch tokens (224 px), 768-d"
+  },
+  "vjepa2_l": {
+   "used_by": [
+    "vjepa2_l_*"
+   ],
+   "library": "transformers",
+   "name": "facebook/vjepa2-vitl-fpc64-256",
+   "hf_repo": "facebook/vjepa2-vitl-fpc64-256",
+   "revision": "b3c1679b7c34d3255ef3547f27c7b226aefab26f",
+   "output": "mean encoder token embedding of a 16-frame clip, 1024-d"
+  },
+  "clap": {
+   "used_by": [
+    "clap_*"
+   ],
+   "library": "transformers",
+   "name": "laion/clap-htsat-unfused",
+   "hf_repo": "laion/clap-htsat-unfused",
+   "revision": "8fa0f1c6d0433df6e97c127f64b2a1d6c0dcda8a",
+   "output": "audio embedding (get_audio_features), 512-d"
+  },
+  "alexnet": {
+   "used_by": [
+    "alexnet_*"
+   ],
+   "library": "torchvision",
+   "name": "alexnet",
+   "weights": "AlexNet_Weights.IMAGENET1K_V1 (alexnet-owt-7be5be79.pth)",
+   "output": "conv5 (features[10], pre-ReLU) average-pooled to 6 x 6, mean of 8 frames"
+  }
+ },
+ "own_features": [
+  "lowlevel_*",
+  "lowav_*",
+  "lowvis_*",
+  "lowaud_*"
+ ],
+ "provenance": {
+  "code_commit": "57c258c904facfde34a9e2c2642450f6d91c15da",
+  "code_dirty": true,
+  "packages": {
+   "open_clip_torch": "3.3.0",
+   "timm": "1.0.30",
+   "transformers": "5.18.0",
+   "torchvision": "0.26.0+cu128",
+   "torch": "2.11.0+cu128",
+   "av": "18.1.0",
+   "librosa": "0.11.0",
+   "opencv-python-headless": "5.0.0.93"
+  },
+  "python": "3.11.17"
+ },
+ "files": {
+  "candidates/con-clip_b32-two_tower_d256_f8.npy": {
+   "bytes": 209024,
+   "sha256": "937e25504a00f387175eecf462177b82484af03353d0a36b1fb7bee5aeeb343a"
+  },
+  "candidates/decw-clap_all_f1.npy": {
+   "bytes": 209024,
+   "sha256": "d884b8ba46f391be466b8a646bdea64cadd4f063a2ec923cf6cf7a50df25bc03"
+  },
+  "candidates/decw-lowlevel_all_f1.npy": {
+   "bytes": 104168,
+   "sha256": "5cb570de08058f0cac67f36a5a760b2ca91238b2621959b004f881aeb7e64421"
+  },
+  "candidates/decw-vjepa2_l_all_f16.npy": {
+   "bytes": 417920,
+   "sha256": "d754b8146a1436a5cb17c9abeb4aa1cba5036e5497f3ecd8b9b7b65b189223e7"
+  },
+  "candidates/pdecw-alexnet_c5p6_f8.npy": {
+   "bytes": 3760256,
+   "sha256": "63e6e11168da403b4e60e5e2cf5866e7888a1c2547dfd9afedf15509e4f41b7c"
+  },
+  "candidates/pdecw-dinov2_b_patch_all_f8.npy": {
+   "bytes": 313472,
+   "sha256": "2db2995247f7264a7e87694f6da7209b835ffa542c0bdc211af416d3b6f47578"
+  },
+  "candidates/pdecw-lowav_all_f1.npy": {
+   "bytes": 171488,
+   "sha256": "3c328d5666303624a7392baa77cf7f8df747c06c80ecdf33846ed55487536e65"
+  },
+  "sub-01/con-clip_b32-two_tower_d256_f8.npz": {
+   "bytes": 4523846,
+   "sha256": "345903c016e590e6cba8eced8eb017e2e4d80c733564a93bd35457afae382413"
+  },
+  "sub-01/decw-clap_all_f1.npz": {
+   "bytes": 1993806,
+   "sha256": "d81e1a53935ee4fb1741d4ea24f53b6d34951c29c1d0f74d3c42776194e1a459"
+  },
+  "sub-01/decw-lowlevel_all_f1.npz": {
+   "bytes": 1029542,
+   "sha256": "0d8d432b81d0ce702a23fd3dc15435663210c2d73ddb1b82f78b7f6ab715446f"
+  },
+  "sub-01/decw-vjepa2_l_all_f16.npz": {
+   "bytes": 3914830,
+   "sha256": "595c2ea790967ebe076dba7d82155d1bbf3dab358d1555fe0f91f3bb549e367d"
+  },
+  "sub-01/pdecw-alexnet_c5p6_f8.npz": {
+   "bytes": 34651214,
+   "sha256": "b0c4ba987180f02f35eb1134676c96e9c038ad38087f9ef30695c420b21dd244"
+  },
+  "sub-01/pdecw-dinov2_b_patch_all_f8.npz": {
+   "bytes": 2954318,
+   "sha256": "a61ac12e2d207fa9f9dba75bc9ee000978235b54c73002051158a051db73c89d"
+  },
+  "sub-01/pdecw-lowav_all_f1.npz": {
+   "bytes": 1648622,
+   "sha256": "67b0643b43ce02ef6ae5e82353c6a2266a668a5c0946edfc58559d85a96b96d4"
+  },
+  "sub-01/train_eeg_mean.npy": {
+   "bytes": 10328,
+   "sha256": "5bc38c17cbd8338f94ab23315e4c1dd6628217b3ad787ffe38dcb53c041dc462"
+  },
+  "sub-02/con-clip_b32-two_tower_d256_f8.npz": {
+   "bytes": 4523846,
+   "sha256": "aba3d543a2ddb2351dd44d0679e8a3782375eaae91b68143b86e4227b8aeb45e"
+  },
+  "sub-02/decw-clap_all_f1.npz": {
+   "bytes": 1993806,
+   "sha256": "5115e07ae552a5af4fcf1b77826e8f12e26d3108f421ceb72dc06b190aa2ed86"
+  },
+  "sub-02/decw-lowlevel_all_f1.npz": {
+   "bytes": 1029542,
+   "sha256": "7b98597de7b2d75c11c21dbcf026e277e82c1b21e1c78fb222a45ce7387aa9be"
+  },
+  "sub-02/decw-vjepa2_l_all_f16.npz": {
+   "bytes": 3914830,
+   "sha256": "1193513fe4fa9c854b4c08831a0a67c9300d37180f07b62771d21c74b9605e42"
+  },
+  "sub-02/pdecw-alexnet_c5p6_f8.npz": {
+   "bytes": 34651214,
+   "sha256": "5dcbdd4980aee4b6ebe878134d59dd87530ed9e966db48565d6697e00a371772"
+  },
+  "sub-02/pdecw-dinov2_b_patch_all_f8.npz": {
+   "bytes": 2954318,
+   "sha256": "7d243d747e85ffa5bbd888a2b8df3aaed5cf2227f3b02b3457cb05df509ef7f4"
+  },
+  "sub-02/pdecw-lowav_all_f1.npz": {
+   "bytes": 1648622,
+   "sha256": "45f6875dd8750f419c6724481aeb4bfbe71b9a0c44e3aca294ea19ad1d551339"
+  },
+  "sub-02/train_eeg_mean.npy": {
+   "bytes": 10328,
+   "sha256": "e36c2ca01d1527a7c7724084aec5d6aeb1c8d8d919b9b425c6c28b3108aa666a"
+  },
+  "sub-03/con-clip_b32-two_tower_d256_f8.npz": {
+   "bytes": 4523846,
+   "sha256": "fb1af1f11e61c36d4ab1413beb7b44514179fcddefa066c1363816bb0eea2966"
+  },
+  "sub-03/decw-clap_all_f1.npz": {
+   "bytes": 1993806,
+   "sha256": "f83b5ebd05aff1a0b456d3facde52ea2f8eb8ed11f25b0913ca37130c9ca7e7d"
+  },
+  "sub-03/decw-lowlevel_all_f1.npz": {
+   "bytes": 1029542,
+   "sha256": "ea49e2e6a970dc6fb38e02cc8da5bf32ab208339d76c6639a8ad9f34e11407a6"
+  },
+  "sub-03/decw-vjepa2_l_all_f16.npz": {
+   "bytes": 3914830,
+   "sha256": "0788b470aa039970f9a34b83f51eb6d9ef3be852e1099bfde9cc0f228ca78da9"
+  },
+  "sub-03/pdecw-alexnet_c5p6_f8.npz": {
+   "bytes": 34651214,
+   "sha256": "1df5bd9abbdae00e12472f7252446718f31b0a03571d9782f8678aa2a3ed6ab6"
+  },
+  "sub-03/pdecw-dinov2_b_patch_all_f8.npz": {
+   "bytes": 2954318,
+   "sha256": "7d1c8c145998aa357738a3b852b2e0efc6f716107b108bdbf4125ac3e2fd5bb4"
+  },
+  "sub-03/pdecw-lowav_all_f1.npz": {
+   "bytes": 1648622,
+   "sha256": "2a1c94548122cc079a4321e6172c852b048533a70590c9faea89812ca2ba665e"
+  },
+  "sub-03/train_eeg_mean.npy": {
+   "bytes": 10328,
+   "sha256": "7ceedc05447cffbcb5fbc1beace87eecea6c7d511a361f28974ce4a461abd4c1"
+  },
+  "sub-04/con-clip_b32-two_tower_d256_f8.npz": {
+   "bytes": 4523846,
+   "sha256": "389246bb74728a077e1eb5656b604a6bd8da7d2ae93039adecec8be45175d384"
+  },
+  "sub-04/decw-clap_all_f1.npz": {
+   "bytes": 1993806,
+   "sha256": "76163b66a3b98a5d33f63c1929a01c32dab2d350dcff84acd6244e8c87338a46"
+  },
+  "sub-04/decw-lowlevel_all_f1.npz": {
+   "bytes": 1029542,
+   "sha256": "861745175f8d5581f6895a66391fb1b8c9bbd4004bc54c6cae42b01f82cf4e04"
+  },
+  "sub-04/decw-vjepa2_l_all_f16.npz": {
+   "bytes": 3914830,
+   "sha256": "c97c2ca3261c258d00e8ed0018e5763e12dfbe1df07da7d36f11074afaedca5c"
+  },
+  "sub-04/pdecw-alexnet_c5p6_f8.npz": {
+   "bytes": 34651214,
+   "sha256": "83771d02cdec78e75319226f0debf6b8390c4c583fa31d8fab00885ef4d0f5b4"
+  },
+  "sub-04/pdecw-dinov2_b_patch_all_f8.npz": {
+   "bytes": 2954318,
+   "sha256": "d8f0d1ec3399c9df326bd4b5a42a80bb82a5a41962687799f74222fc713bad65"
+  },
+  "sub-04/pdecw-lowav_all_f1.npz": {
+   "bytes": 1648622,
+   "sha256": "2570fe9d0e34e5a2986d666597c73c93fbbbacfe446cbe6a0aed174c26baa5b3"
+  },
+  "sub-04/train_eeg_mean.npy": {
+   "bytes": 10328,
+   "sha256": "b7880a19810047ce8f43dadcb5e30ecc139da29dcf8bf4fe31b0c0b99a87f904"
+  },
+  "sub-05/con-clip_b32-two_tower_d256_f8.npz": {
+   "bytes": 4523846,
+   "sha256": "35226f21f0d147063ad8d0aaf401a81f14279b05fd527721db2844a40c394620"
+  },
+  "sub-05/decw-clap_all_f1.npz": {
+   "bytes": 1993806,
+   "sha256": "18c3c096e1288f51d367246f574bec58d0fe62ecfa8adb5905a51b8b42787c48"
+  },
+  "sub-05/decw-lowlevel_all_f1.npz": {
+   "bytes": 1029542,
+   "sha256": "1211bccc3899c19cc252521ea2631d2f685c8f58b1308302ea4f10ff6015cc53"
+  },
+  "sub-05/decw-vjepa2_l_all_f16.npz": {
+   "bytes": 3914830,
+   "sha256": "e2f5c58a4777fb38e60b3cff7ccfe148fb1ee4a687fbe6fd6ac869411e91c6e4"
+  },
+  "sub-05/pdecw-alexnet_c5p6_f8.npz": {
+   "bytes": 34651214,
+   "sha256": "d7796470ba2998d17f2d4d474ab6013f55ec0bf3536241480f2f24e3d0cc1ab2"
+  },
+  "sub-05/pdecw-dinov2_b_patch_all_f8.npz": {
+   "bytes": 2954318,
+   "sha256": "6fdd16493eff17a8fd8a46e025303324b24d5d2da5e6fe6453ccc887c140c84f"
+  },
+  "sub-05/pdecw-lowav_all_f1.npz": {
+   "bytes": 1648622,
+   "sha256": "91286d65300c667a633fa514c675cb09157e65cf35918ebcf5b8b69265225d55"
+  },
+  "sub-05/train_eeg_mean.npy": {
+   "bytes": 10328,
+   "sha256": "e5bbd79ac7b18185d518f12d09194ad154b21ae5ca956c68abb04ebe686359c8"
+  },
+  "sub-06/con-clip_b32-two_tower_d256_f8.npz": {
+   "bytes": 4523846,
+   "sha256": "2e71e1e902d92eb776b22b940c890de97af69f2a7957ed3bb5556c9c73344bf3"
+  },
+  "sub-06/decw-clap_all_f1.npz": {
+   "bytes": 1993806,
+   "sha256": "72631cdffa0000bd3a21cd3a2209374c78d061c1ffc4c2fe9f43837ff3f23b2a"
+  },
+  "sub-06/decw-lowlevel_all_f1.npz": {
+   "bytes": 1029542,
+   "sha256": "df7106af2ff7f3c2dfd84aaec4257342aa42d568c8e58e6b637fb39c388f62ac"
+  },
+  "sub-06/decw-vjepa2_l_all_f16.npz": {
+   "bytes": 3914830,
+   "sha256": "91f3c73cb31c2aa5eaf3ef3c00d452910a990f1e46e32e78ec3893cecdff2bf0"
+  },
+  "sub-06/pdecw-alexnet_c5p6_f8.npz": {
+   "bytes": 34651214,
+   "sha256": "dd9cf79c6ccb5b27241fde018d8e4bb767435e44861b96eca40c177cddb62412"
+  },
+  "sub-06/pdecw-dinov2_b_patch_all_f8.npz": {
+   "bytes": 2954318,
+   "sha256": "66f68b3c0dc28bc6fe2cb5bcd74fb9d9bbccb30b007a716d21912314e699faec"
+  },
+  "sub-06/pdecw-lowav_all_f1.npz": {
+   "bytes": 1648622,
+   "sha256": "7f6a85dcfc555586a8e4458e37b1402c992efdd402e20cb277c5b1067aee9731"
+  },
+  "sub-06/train_eeg_mean.npy": {
+   "bytes": 10328,
+   "sha256": "f12443be90eeaf7f7d0d5dc9dae084683e384e7ba2655402a7561efcda95f296"
+  }
+ },
+ "checks": {
+  "sub-01/pdecw-dinov2_b_patch_all_f8": {
+   "live_vs_cached_max_abs": 4.440892098500626e-16
+  },
+  "sub-01/decw-vjepa2_l_all_f16": {
+   "live_vs_cached_max_abs": 0.0
+  },
+  "sub-01/con-clip_b32-two_tower_d256_f8": {
+   "live_vs_cached_max_abs": 0.0
+  },
+  "sub-01/pdecw-alexnet_c5p6_f8": {
+   "live_vs_cached_max_abs": 4.440892098500626e-16
+  },
+  "sub-01/decw-lowlevel_all_f1": {
+   "live_vs_cached_max_abs": 0.0
+  },
+  "sub-01/decw-clap_all_f1": {
+   "live_vs_cached_max_abs": 0.0
+  },
+  "sub-01/pdecw-lowav_all_f1": {
+   "live_vs_cached_max_abs": 1.1934897514720433e-15
+  },
+  "sub-02/pdecw-dinov2_b_patch_all_f8": {
+   "live_vs_cached_max_abs": 4.440892098500626e-16
+  },
+  "sub-02/decw-vjepa2_l_all_f16": {
+   "live_vs_cached_max_abs": 0.0
+  },
+  "sub-02/con-clip_b32-two_tower_d256_f8": {
+   "live_vs_cached_max_abs": 0.0
+  },
+  "sub-02/pdecw-alexnet_c5p6_f8": {
+   "live_vs_cached_max_abs": 4.996003610813204e-16
+  },
+  "sub-02/decw-lowlevel_all_f1": {
+   "live_vs_cached_max_abs": 0.0
+  },
+  "sub-02/decw-clap_all_f1": {
+   "live_vs_cached_max_abs": 0.0
+  },
+  "sub-02/pdecw-lowav_all_f1": {
+   "live_vs_cached_max_abs": 9.992007221626409e-16
+  },
+  "sub-03/pdecw-dinov2_b_patch_all_f8": {
+   "live_vs_cached_max_abs": 4.996003610813204e-16
+  },
+  "sub-03/decw-vjepa2_l_all_f16": {
+   "live_vs_cached_max_abs": 0.0
+  },
+  "sub-03/con-clip_b32-two_tower_d256_f8": {
+   "live_vs_cached_max_abs": 0.0
+  },
+  "sub-03/pdecw-alexnet_c5p6_f8": {
+   "live_vs_cached_max_abs": 4.718447854656915e-16
+  },
+  "sub-03/decw-lowlevel_all_f1": {
+   "live_vs_cached_max_abs": 0.0
+  },
+  "sub-03/decw-clap_all_f1": {
+   "live_vs_cached_max_abs": 0.0
+  },
+  "sub-03/pdecw-lowav_all_f1": {
+   "live_vs_cached_max_abs": 1.6930901125533637e-15
+  },
+  "sub-04/pdecw-dinov2_b_patch_all_f8": {
+   "live_vs_cached_max_abs": 4.718447854656915e-16
+  },
+  "sub-04/decw-vjepa2_l_all_f16": {
+   "live_vs_cached_max_abs": 0.0
+  },
+  "sub-04/con-clip_b32-two_tower_d256_f8": {
+   "live_vs_cached_max_abs": 0.0
+  },
+  "sub-04/pdecw-alexnet_c5p6_f8": {
+   "live_vs_cached_max_abs": 6.661338147750939e-16
+  },
+  "sub-04/decw-lowlevel_all_f1": {
+   "live_vs_cached_max_abs": 0.0
+  },
+  "sub-04/decw-clap_all_f1": {
+   "live_vs_cached_max_abs": 0.0
+  },
+  "sub-04/pdecw-lowav_all_f1": {
+   "live_vs_cached_max_abs": 1.2212453270876722e-15
+  },
+  "sub-05/pdecw-dinov2_b_patch_all_f8": {
+   "live_vs_cached_max_abs": 4.440892098500626e-16
+  },
+  "sub-05/decw-vjepa2_l_all_f16": {
+   "live_vs_cached_max_abs": 0.0
+  },
+  "sub-05/con-clip_b32-two_tower_d256_f8": {
+   "live_vs_cached_max_abs": 0.0
+  },
+  "sub-05/pdecw-alexnet_c5p6_f8": {
+   "live_vs_cached_max_abs": 9.298117831235686e-16
+  },
+  "sub-05/decw-lowlevel_all_f1": {
+   "live_vs_cached_max_abs": 0.0
+  },
+  "sub-05/decw-clap_all_f1": {
+   "live_vs_cached_max_abs": 0.0
+  },
+  "sub-05/pdecw-lowav_all_f1": {
+   "live_vs_cached_max_abs": 3.1843448711210698e-09
+  },
+  "sub-06/pdecw-dinov2_b_patch_all_f8": {
+   "live_vs_cached_max_abs": 4.163336342344337e-16
+  },
+  "sub-06/decw-vjepa2_l_all_f16": {
+   "live_vs_cached_max_abs": 0.0
+  },
+  "sub-06/con-clip_b32-two_tower_d256_f8": {
+   "live_vs_cached_max_abs": 0.0
+  },
+  "sub-06/pdecw-alexnet_c5p6_f8": {
+   "live_vs_cached_max_abs": 4.996003610813204e-16
+  },
+  "sub-06/decw-lowlevel_all_f1": {
+   "live_vs_cached_max_abs": 0.0
+  },
+  "sub-06/decw-clap_all_f1": {
+   "live_vs_cached_max_abs": 0.0
+  },
+  "sub-06/pdecw-lowav_all_f1": {
+   "live_vs_cached_max_abs": 2.466761517272431e-09
+  }
+ }
+}

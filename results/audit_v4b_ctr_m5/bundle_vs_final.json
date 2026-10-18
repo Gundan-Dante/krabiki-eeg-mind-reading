@@ -1,0 +1,18 @@
+{
+ "sub-05": {
+  "ranked_lists": {
+   "identical": true,
+   "rows_identical": 102,
+   "entries_differing": 0,
+   "top1_agree": 1.0
+  }
+ },
+ "sub-06": {
+  "ranked_lists": {
+   "identical": true,
+   "rows_identical": 102,
+   "entries_differing": 0,
+   "top1_agree": 1.0
+  }
+ }
+}
